@@ -8,7 +8,7 @@ async function bootstrap() {
 
   const options = new DocumentBuilder().setTitle('🚀sahha').build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('/', app, document);
   app.useGlobalFilters(new AxiosExceptionFilter());
   await app.listen(3000);
 }
